@@ -11,6 +11,7 @@ public class MercanciaScript : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
+            Debug.Log(collision.gameObject.name);
             Destroy(gameObject);
         }
     }
