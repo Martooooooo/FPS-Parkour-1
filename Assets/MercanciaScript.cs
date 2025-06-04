@@ -6,13 +6,22 @@ public class MercanciaScript : MonoBehaviour
 {
 
     public int precio;
-    // Start is called before the first frame update
-    private void OnCollisionEnter(Collision collision)
+    public MoneyManager moneyManager;
+    void Start()
     {
+        moneyManager = FindObjectOfType<MoneyManager>();
+    }
+    // Start is called before the first frame update
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.name == "Player")
         {
-            Debug.Log(collision.gameObject.name);
-            Destroy(gameObject);
+            
+            if (moneyManager.UpdateMoney(-precio))
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
