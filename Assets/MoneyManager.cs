@@ -11,7 +11,7 @@ public class MoneyManager : MonoBehaviour
 
     private void Start()
     {
-        txtDinero.text = "Dinero actual: $100";
+        txtDinero.text = "Dinero actual: $" + money;
     }
     public bool UpdateMoney(float amount)
     {
