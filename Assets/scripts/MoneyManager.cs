@@ -11,7 +11,7 @@ public class MoneyManager : MonoBehaviour
 
     private void Start()
     {
-        txtDinero.text = "Dinero actual: $" + money;
+        txtDinero.text = "Dinero: $" + money;
     }
     public bool UpdateMoney(float amount)
     {
@@ -24,7 +24,7 @@ public class MoneyManager : MonoBehaviour
         } else
         {
             money += amount;
-            txtDinero.text = "Dinero actual: $" + money;
+            txtDinero.text = "Dinero: $" + money;
             return true;
         }
         
